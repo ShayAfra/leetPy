@@ -4,7 +4,7 @@
 
 def find_short(s):
     words = s.split()
-    shortestLength= len(words[1])
+    shortestLength= len(words[0])
     for word in words:
         if len(word) < shortestLength:
             shortestLength = len(word)
