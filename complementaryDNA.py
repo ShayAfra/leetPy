@@ -14,3 +14,11 @@
 def DNA_strand(dna):
     complements={"A":"T","T":"A","G":"C","C":"G"}
     return "".join(complements[strand] for strand in dna)
+
+# second try solution
+def DNA_strand(dna):
+    final= ""
+    strands = {'A':'T', 'T':'A', 'G':'C', 'C':'G'}
+    for strand in dna:
+        final += strands[strand]
+    return final
