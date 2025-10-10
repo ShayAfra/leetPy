@@ -12,3 +12,7 @@ def array_diff(a, b):
         while val in combo:
             combo.remove(val)
     return combo
+
+# list comprehesion solution
+# def array_diff(a, b):
+#     return [x for x in a if x not in b]
