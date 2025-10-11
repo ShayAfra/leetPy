@@ -16,3 +16,8 @@ def array_diff(a, b):
 # list comprehesion solution
 # def array_diff(a, b):
 #     return [x for x in a if x not in b]
+
+
+# tried to do it again came up with this, practice makes perfect
+def array_diff(a, b):
+    return [x for x in a if x not in b]
