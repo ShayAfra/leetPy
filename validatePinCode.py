@@ -9,3 +9,7 @@
 
 def validate_pin(pin):
     return (len(pin)==4 or len(pin)==6) and pin.isdigit()
+
+# this is another solution. same but different
+# def validate_pin(pin):
+#     return len(pin) in (4, 6) and pin.isdigit()
