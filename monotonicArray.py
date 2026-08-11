@@ -36,5 +36,6 @@ class Solution:
                 down = True
             if nums[i]< nums[i+1]:
                 up = True
-        return True if up == True and down == False or up == False and down == True else False
+        return False if(up == True and down == True) else True
+            
             
