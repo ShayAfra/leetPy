@@ -42,4 +42,4 @@ class Solution:
             if low % 2 == 1:
                 return (length //2) + 1
             else:
-                return length //2
+                return length 
