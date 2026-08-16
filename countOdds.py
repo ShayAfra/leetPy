@@ -25,10 +25,21 @@
 # Constraints:
 
 #     0 <= low <= high <= 10^9
+# class Solution:
+#     def countOdds(self, low: int, high: int) -> int:
+#         count = 0
+#         for i in range(low,high+1):
+#             if i % 2 == 1:
+#                 count +=1
+#         return count
+
 class Solution:
     def countOdds(self, low: int, high: int) -> int:
-        count = 0
-        for i in range(low,high+1):
-            if i % 2 == 1:
-                count +=1
-        return count
+        length = (high - low) + 1
+        if length %2 == 0:
+            return length // 2
+        else:
+            if low % 2 == 1:
+                return (length //2) + 1
+            else:
+                return length //2
