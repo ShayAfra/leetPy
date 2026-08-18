@@ -51,3 +51,15 @@ class Solution:
                 if sum > max:
                     max = sum
         return max
+
+
+    # OR
+
+
+    class Solution:
+        def maximumWealth(self, accounts: List[List[int]]) -> int:
+            largest = 0
+            for i in range(len(accounts)):
+                if sum(accounts[i]) > largest:
+                    largest = sum(accounts[i])
+            return largest
