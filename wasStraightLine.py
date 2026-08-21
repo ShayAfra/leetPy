@@ -22,13 +22,26 @@
 #     coordinates[i].length == 2
 #     -10^4 <= coordinates[i][0], coordinates[i][1] <= 10^4
 #     coordinates contains no duplicate point.
+# class Solution:
+#     def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
+#         slope = (coordinates[1][1]-coordinates[0][1])/(coordinates[1][0]-coordinates[0][0])
+#         for i in range(2,(len(coordinates)-1)):
+#             tempSlope = (coordinates[i+1][1]-coordinates[i][1])/(coordinates[i+1][0]-coordinates[i][0])
+#             if tempSlope != slope:
+#                 return False
+#         return True
+            
 class Solution:
     def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
-        slope = (coordinates[1][1]-coordinates[0][1])/(coordinates[1][0]-coordinates[0][0])
+        yDiff = (coordinates[1][1]-coordinates[0][1])
+        xDiff = (coordinates[1][0]-coordinates[0][0])
         for i in range(2,(len(coordinates)-1)):
-            tempSlope = (coordinates[i+1][1]-coordinates[i][1])/(coordinates[i+1][0]-coordinates[i][0])
-            if tempSlope != slope:
+            tempYDiff = (coordinates[i+1][1]-coordinates[i][1])
+            tempXDiff = (coordinates[i+1][0]-coordinates[i][0])
+            if (yDiff * tempXDiff) != (xDiff * tempYDiff):
                 return False
+            yDiff = tempYDiff
+            xDiff = tempXDiff
         return True
             
         
