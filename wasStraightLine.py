@@ -35,7 +35,7 @@ class Solution:
     def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
         yDiff = (coordinates[1][1]-coordinates[0][1])
         xDiff = (coordinates[1][0]-coordinates[0][0])
-        for i in range(2,(len(coordinates)-1)):
+        for i in range(1,(len(coordinates)-1)):
             tempYDiff = (coordinates[i+1][1]-coordinates[i][1])
             tempXDiff = (coordinates[i+1][0]-coordinates[i][0])
             if (yDiff * tempXDiff) != (xDiff * tempYDiff):
