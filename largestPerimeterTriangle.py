@@ -35,3 +35,23 @@ class Solution:
         if runSum[1] + runSum[2] > runSum[0]:
             return sum(runSum)
         return 0
+
+
+
+# new solution for largest perimmeter triangle:
+class Solution:
+    def largestPerimeter(self, nums: List[int]) -> int:
+        nums.sort(reverse = True)
+        total = [nums[0],nums[1],nums[2]]
+        if total[0] < total[1] + total[2]:
+            return sum(total)
+        for i in range(3,len(nums)):
+            if total[0] < total[1] + total[2]:
+                return sum(total)
+            else:
+                total.pop(0)
+                total.append(nums[i])
+        if total[0] < total[1] + total[2]:
+            return sum(total)
+        else:
+            return 0
